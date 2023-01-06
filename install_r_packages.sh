@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-Rscript -e 'remotes::install_deps()'
+Rscript -e 'remotes::install_deps("/tmp")'

@@ -5,6 +5,7 @@ RUN ["chmod", "+x", "/rocker_scripts/install_jags.sh"]
 RUN /rocker_scripts/install_jags.sh
 
 COPY install_r_packages.sh /rocker_scripts/install_r_packages.sh
+COPY DESCRIPTION /tmp/DESCRIPTION
 RUN ["chmod", "+x", "/rocker_scripts/install_r_packages.sh"]
 RUN /rocker_scripts/install_r_packages.sh
 
