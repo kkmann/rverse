@@ -1,5 +1,5 @@
 Depends:
     tidyverse,
-    future, doParallel, doRNG, furrr, clustermq,
+    future, doFuture, doRNG, furrr, clustermq,
     targets, tarchetypes,
     rstan, rjags
