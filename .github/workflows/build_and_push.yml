@@ -1,11 +1,12 @@
-name: Build Docker image
+name: Publish Docker image
 
 on:
-  push
+  release:
+    types: [published]
 
 jobs:
-  build_image:
-    name: build Docker image
+  build_and_push_image:
+    name: build Docker image and publish to dockerhub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -23,10 +24,10 @@ jobs:
         with:
           images: kevinkunzmann/rverse
 
-      - name: Build Docker image
+      - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
-          push: FALSE
+          push: TRUE
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

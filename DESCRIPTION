@@ -1,0 +1,5 @@
+Depends:
+    tidyverse,
+    future, doParallel, doRNG, furrr,
+    targets, tarchetypes,
+    rstan, rjags
