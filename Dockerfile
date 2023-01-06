@@ -1,6 +1,6 @@
 FROM rocker/verse:4.2.2
 
-COPY install.sh /rocker_scripts/install_jags.sh
+COPY install_jags.sh /rocker_scripts/install_jags.sh
 
 RUN /rocker_scripts/install_jags.sh
 
