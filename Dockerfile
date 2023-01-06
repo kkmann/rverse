@@ -1,6 +1,7 @@
 FROM rocker/verse:4.2.2
 
 COPY install_jags.sh /rocker_scripts/install_jags.sh
+RUN ["chmod", "+x", "/rocker_scripts/install_jags.sh"]
 
 RUN /rocker_scripts/install_jags.sh
 
